@@ -1,6 +1,6 @@
 {
     "name": "react-json-tree-view",
-    "version": "1.0.7",
+    "version": "1.0.8",
     "description": "React Package for JSON tree view",
     "main": "./lib/JsonViewer.js",
     "license": "MIT",

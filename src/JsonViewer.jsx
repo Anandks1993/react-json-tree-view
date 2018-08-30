@@ -184,7 +184,7 @@ class JsonViewer extends React.Component {
                         isOpen ?
                             _map(data, (value, key) => this.renderKeyValuePair(value, key))
                             :
-                            <p>...</p>
+                            <p className={b('dots').toString()}>...</p>
                     }
                     <span style={{ color: curlyBracketsColor }} className={b('close-bracket')({ isOpen: !isOpen }).toString()}>{'}'}</span>
             </div>
