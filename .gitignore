@@ -1,0 +1,5 @@
+# Component lib directory
+lib
+
+# Dependency directories
+node_modules/

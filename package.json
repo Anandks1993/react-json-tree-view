@@ -1,0 +1,58 @@
+{
+    "name": "react-json-tree-view",
+    "version": "1.0.4",
+    "description": "React Package for JSON tree view",
+    "main": "./lib/JsonViewer.js",
+    "license": "MIT",
+    "scripts": {
+        "build": "webpack"
+    },
+    "keywords": [
+        "json",
+        "json-viewer",
+        "react",
+        "react-json",
+        "react-json-view",
+        "react-component",
+        "json-tree-view",
+        "react-json-tree"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/Anandks1993/react-json-tree-view.git"
+    },
+    "homepage": "https://github.com/Anandks1993/react-json-tree-view",
+    "author": {
+        "name": "Anand KS",
+        "email": "anadec5302@gmail.com"
+    },
+    "peerDependencies": {
+        "react": "^16.4.1",
+        "react-dom": "^16.4.1",
+        "lodash": "^4.17.10",
+        "prop-types": "^15.6.2",
+        "react-icons-kit": "^1.1.7",
+        "bem-cn": "^2.1.3"
+    },
+    "devDependencies": {
+        "babel-core": "^6.21.0",
+        "babel-loader": "^7.1.4",
+        "babel-preset-env": "^1.6.1",
+        "babel-preset-react": "^6.16.0",
+        "babel-preset-stage-0": "^6.24.1",
+        "path": "^0.12.7",
+        "prop-types": "^15.6.0",
+        "react": "^16.0.0",
+        "react-dom": "^16.0.0",
+        "webpack": "^4.5.0",
+        "webpack-cli": "^2.0.14",
+        "sass-loader": "^7.0.3",
+        "style-loader": "^0.21.0",
+        "css-loader": "^1.0.0",
+        "node-sass": "^4.9.2"
+    },
+    "dependencies": {
+        "bem-cn": "^2.1.3",
+        "react-icons-kit": "^1.1.7"
+    }
+}
