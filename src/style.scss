@@ -48,6 +48,8 @@
 
         &--isOpen {
             margin-left: 0;
+            position: relative;
+            top: 2px;
         }
     }
 
@@ -61,11 +63,8 @@
         }
     }
 
-    &__wrap-closed {
-        
-        p {
-            margin: 0;
-        }
+    &__dots {
+        margin: 0;
     }
     
     &__arrow-right {

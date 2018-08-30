@@ -91,7 +91,7 @@ class JsonViewer extends React.Component {
                                 :
                                 <span style={{ color: curlyBracketsColor }} className={b('open-bracket').toString()}>&nbsp;{'{'}</span>
                         }
-                        <p>&nbsp;...</p>
+                        <p className={b('dots').toString()}>&nbsp;...</p>
                         {
                             _isArray(value) ?
                                 <span style={{ color: boxBracketsColor }} className={b('open-bracket').toString()}>&nbsp;{'],'}</span>
