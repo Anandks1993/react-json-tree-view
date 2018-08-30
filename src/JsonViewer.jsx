@@ -17,7 +17,7 @@ const propTypes = {
     keyColor: PropTypes.string,
     valueColor: PropTypes.string,
     borderLeftColor: PropTypes.string,
-    sortArrowColor: PropTypes.string,
+    minMaxIconColor: PropTypes.string,
     bulletColor: PropTypes.string,
     boxBracketsColor: PropTypes.string,
     curlyBracketsColor: PropTypes.string,
@@ -28,7 +28,7 @@ const defaultProps = {
     keyColor: '#000',
     valueColor: '#000',
     borderLeftColor: '#A09696',
-    sortArrowColor: '#000',
+    minMaxIconColor: '#000',
     bulletColor: '#000',
     boxBracketsColor: '#000',
     curlyBracketsColor: '#000',
@@ -47,14 +47,14 @@ class JsonViewer extends React.Component {
     
     componentDidMount() {
         let appThis = this;
-        const { sortArrowColor } = this.props;
+        const { minMaxIconColor } = this.props;
         const arrow = document.getElementsByName('arrow');
         Array.prototype.forEach.call(arrow, elem => {
             if (elem.className === 'json-viewer__arrow-down') {
-                elem.style.borderTopColor = sortArrowColor;
+                elem.style.borderTopColor = minMaxIconColor;
                 appThis.forceUpdate();
             } else if (elem.className === 'json-viewer__arrow-right') {
-                elem.style.borderLeftColor = sortArrowColor;
+                elem.style.borderLeftColor = minMaxIconColor;
                 appThis.forceUpdate();
             }
         })
@@ -138,7 +138,7 @@ class JsonViewer extends React.Component {
     };
 
     handleKeyValueToggle(e) {
-        const { sortArrowColor } = this.props;
+        const { minMaxIconColor } = this.props;
         let jsonParentArray = e.target.parentElement.childNodes;
 
         const jsonParent = _filter(jsonParentArray, child => {
@@ -151,13 +151,13 @@ class JsonViewer extends React.Component {
                     e.target.classList.remove('json-viewer__arrow-down');
                     e.target.classList.add('json-viewer__arrow-right');
                     child.dataset.toggleDummy = 'open';
-                    e.target.style.borderLeftColor = sortArrowColor;
+                    e.target.style.borderLeftColor = minMaxIconColor;
                     e.target.style.borderTopColor = 'transparent';
                 } else {
                     e.target.classList.remove('json-viewer__arrow-right');
                     e.target.classList.add('json-viewer__arrow-down');
                     child.dataset.toggleDummy = 'closed';
-                    e.target.style.borderTopColor = sortArrowColor;
+                    e.target.style.borderTopColor = minMaxIconColor;
                     e.target.style.borderLeftColor = 'transparent';
                 }
             }
@@ -173,12 +173,12 @@ class JsonViewer extends React.Component {
 
     render() {
         const { isOpen } = this.state;
-        const { data, sortArrowColor, curlyBracketsColor } = this.props;
+        const { data, minMaxIconColor, curlyBracketsColor } = this.props;
         const b = BEM('json-viewer');
 
         return (
             <div className={b('container')({ isOpen: !isOpen }).toString()}>
-                <Icon style={{ color: sortArrowColor }} className={b('sort-icon')({ isOpen: !isOpen }).toString()} icon={isOpen ? sortDown : caretRight} onClick={this.handleToggleJson} />
+                <Icon style={{ color: minMaxIconColor }} className={b('sort-icon')({ isOpen: !isOpen }).toString()} icon={isOpen ? sortDown : caretRight} onClick={this.handleToggleJson} />
                     <span style={{ color: curlyBracketsColor }} className={b('open-bracket').toString()}>&nbsp;{'{'}</span>
                     {
                         isOpen ?
